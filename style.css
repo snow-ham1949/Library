@@ -1,0 +1,200 @@
+html {
+    /* footer support */
+    position: relative;
+    min-height: 100%;
+  }
+
+body {
+    margin: 0px;
+    width: 100vw;
+    font-family: -apple-system, system-ui,  BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    height: 60px;
+    background-color: #DFE8CC;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.title {
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    background-color: #F7EDDB;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#addbook-btn {
+    width: 170px;
+    height: 60px;
+    font-size: 20px;
+}
+
+.main, .footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #CCD6A6;
+}
+
+.main {
+    height: 600px;
+    padding: 20px 20px;
+}
+
+.addbook-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #EAF6F6;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    line-height: 1.2;
+}
+
+.book-card > p{
+    margin: 0px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+footer {
+    height: 20px;
+    padding: 5px 0px;
+    text-align: center;
+}
+
+.btn-green {
+    border: 3px solid #377D71;
+}
+
+.btn-red {
+    border: 3px solid #EB4747;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    top: 60%;
+    left: 50%;
+    width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #73A9AD;
+    text-align: center;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.2s ease-in-out;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+.overlay.active {
+    display: block;
+}
+
+#addBookForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#addBookForm > button {
+    width: 90%;
+}
+
+p.error-msg {
+    display: none;
+    color: #EB4747; 
+}
+
+p.error-msg.active {
+    display: block;
+    margin-top: -15px;
+}
+
+input {
+    background-color: #E4DCCF;
+    border: none;
+    outline: none;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+    height: 30px;
+    width: 75%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input[type='text'],
+input[type='number'] {
+  cursor: text;
+}
+
+.hasRead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    margin: 0px;
+    accent-color: white;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Library</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="title">Library</div>
+            <button type="submit" class="btn" id="login-btn">Log in</button>
+        </header>
+        <div class="main">
+            <div class="addbook-btn">
+                <button class="btn" id="addbook-btn"> + Add Book</button>
+            </div>
+            <div class="book-grid">
+
+            </div>
+        </div>
+        <footer class="footer">
+            Copyright © 2022 csypt
+        </footer>
+        <div class="modal" id="addBookModal">
+            <form id="addBookForm">
+                <h3>Add new book</h3>
+                <input type="text" id="title" placeholder="Title" required maxlength="30">
+                <p class="error-msg" id="error-msg"></p>
+                <input type="text" id="author" placeholder="Author" required maxlength="30">
+                <input type="number" id="pages" placeholder="Pages" required maxlength="1000">
+                <div class="hasRead">
+                    <label for="hasRead">Have you read it?</label>
+                    <input type="checkbox" class="checkbox" id="hasRead">
+                </div>
+                <button type="submit" class="btn btn-green">Submit</button>
+            </form>
+        </div>
+        <div class="overlay" id="overlay"></div>
+
+
+    </div>
+</body>
+</html>
